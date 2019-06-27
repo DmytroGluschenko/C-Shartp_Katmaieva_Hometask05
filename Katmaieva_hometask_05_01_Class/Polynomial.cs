@@ -16,13 +16,13 @@ namespace Katmaieva_hometask_05_Class
 
     class Polynomial
     {
-        private int[] arrayOfCoefficients;                   //field
+        private int[] arrayOfCoefficients;                   
 
         public Polynomial(int[] array)                    //constructor
         {
             this.arrayOfCoefficients = array;
         }
-        public int DegreeIndex                              //property for degree: it will show the index -1
+        public int DegreeIndex                              //property for degree
         {
             get
             {
@@ -59,7 +59,7 @@ namespace Katmaieva_hometask_05_Class
                     }
                     else
                         sum = "";
-                    if (degree == 1)                                   //чтобы не писать х^1
+                    if (degree == 1)                                   //for х^1
                     {
                         result += sum + arrayOfCoefficients[i] + "x";
                     }
@@ -73,7 +73,7 @@ namespace Katmaieva_hometask_05_Class
         }
 
 
-        public int this[int degreeIndex]                          //indexer - доступ к коэффициенту по индексу степени
+        public int this[int degreeIndex]                          //indexer - access to the coefficient by the degree index
         {
             get
             {
@@ -91,11 +91,6 @@ namespace Katmaieva_hometask_05_Class
             int[] result = new int[biggerPolynom+1];
             for (int i=biggerPolynom; i >=0; i--)
             {
-                /*if (i > left.DegreeIndex)
-                    result[i] = right[i];
-                else if (i > right.DegreeIndex)
-                    result[i] = left[i];
-                else*/
                 result[i] = left[i] + right[i];
             }
             return new Polynomial(result);

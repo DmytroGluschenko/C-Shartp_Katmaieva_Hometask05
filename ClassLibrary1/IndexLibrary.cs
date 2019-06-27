@@ -15,21 +15,21 @@ namespace ClassLibrary1
         */
         public int[] NumbaringArray;
         private int lowerBoundry;
-        public int LowerBoundry         //property of lower boundry
+        public int LowerBoundry                               //property of lower boundry
         {
             get
             {
                 return lowerBoundry;
             }
         }
-        public int UpperBoundry         //property of upper boundry
+        public int UpperBoundry                                //property of upper boundry
         {
             get
             {
                 return lowerBoundry - 1 + NumbaringArray.Length;
             }
         }
-        public int LengthOfArray           //property length of array
+        public int LengthOfArray                             //property length of array
         {
             get
             {
@@ -41,7 +41,7 @@ namespace ClassLibrary1
             NumbaringArray = array;
             lowerBoundry = firstIndex;
         }
-        public int this[int index]          //indexer
+        public int this[int index]                              //indexer
         {
             get
             {
